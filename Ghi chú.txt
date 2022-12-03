@@ -1,2 +1,0 @@
-Nhớ push lên nhánh trước chứ không push trực tiếp vào main
-Nhớ pull bản cập nhật gần nhất của main về trước khi chỉnh sửa và push lên
