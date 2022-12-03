@@ -1,0 +1,1 @@
+Nhớ push lên nhánh trước chứ không push trực tiếp vào main
