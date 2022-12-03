@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Hotel Booking Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./bookingroom..css" />
+
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+  </head>
+  <style>
+    
+
+    @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+  <body>
+   <section>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar flex1">
+          <ul class="nav-menu">
+            <li>
+              <div class="logo">
+                <img class="img_logo" src="./image/logo.png" alt="" />
+              </div>
+            </li>
+            <li class="signin"><a href="#home">Sign in</a></li>
+            <li class="aboutus"><a href="#about">About Us</a></li>
+            <li><a href="#room">Booking room</a></li>
+            <li><a href="#services">Service pack</a></li>
+            <li><a href="#shop">Booking event</a></li>
+            <li><a href="#testimonials">Promotion</a></li>
+            <li class="dropdown">
+              <a class="drop"
+                >EN &nbsp;<img
+                  class="img_flag"
+                  src="./image/EN.png"
+              /></a>
+              <div class="dropdown__content">
+                <a href="trang-tieng-viet"
+                  >VI &nbsp;<img
+                    class="img_flag"
+                    src="./image/VN.png"
+                /></a>
+              </div>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobliemmenu);
+
+      function mobliemmenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+   </section>
+    <section class="home" id="home">
+      <div class="container">
+        <h1>OUR ROOM</h1>
+        <p>Enjoy your vacation</p>
+
+        <div class="content grid">
+          <div class="box">
+            <span>CHECKIN DATE </span> <br />
+            <input type="date" placeholder="29/20/2021" />
+          </div>
+          <div class="box">
+            <span>CHECKOUT DATE </span> <br />
+            <input type="date" placeholder="29/20/2021" />
+          </div>
+          <div class="box">
+            <span>ADULTS</span> <br />
+            <input type="number" placeholder="01" />
+          </div>
+          <div class="box">
+            <span>CHILDREN </span> <br />
+            <input type="number" placeholder="01" />
+          </div>
+          <div class="box">
+            <span>BRANCH </span> <br />
+           <select>
+            <option>Ha Noi</option>
+            <option>Ho Chi Minh</option>
+            <option>Da Nang</option>
+            <option>Phan Thiet</option>
+           </select>
+          </div>
+          <div class="box1">
+            <button class="flex1"><a href="#rooms">
+              <span >Check Availability</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <section class="promotion" id="promotion">
+      <div class="container">
+        <div id="slideshow">
+          <div class="slide-wrapper">
+            <div class="slide"><img src="./image/Hotel.png"></div>
+            <div class="slide"><img src="./image/Black and Yellow Modern Black Friday Sale Facebook Ad.png"></div>
+               <div class="slide"><img src="./image/Black Gold Modern Black Friday Sale Flyer.png"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="suggest" id="suggest">
+      <div class="container">
+        <div class="heading">
+          <h1>OUR SUGGEST</h1>
+        </div>
+        <div class="content flex top">
+          <div class="left">
+            <h3>RESORT CLASSIC ROOM OCEANVIEW</h3>
+            <p>
+              Relax at our luxury resort in Vietnam where contemporary design
+              meets Vietnamese-inspired décor amidst a spacious 70 sqm Classic
+              Room.
+            </p>
+            <a href="./suggest.html">
+            <button class="flex1">
+              <span>View more</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button></a>
+          </div>
+          <div class="right">
+            <img
+            src="./image/ICPQ_Resort-Classic-Ocean-View1-1-870x555.jpg"
+            alt=""
+            width="500px" height="300px"
+          />
+           
+            
+          </div>
+        </div>
+        <!-- suggest2 -->
+        <div class="content flex top1">
+          <div class="left">
+            <h3>ROYAL STYLE WITH ROYAL ROOM</h3>
+            <p>
+              Bringing great inspiration and energy by the spacious space of the
+              corner unit with a large balcony full of sunlight and the
+              exclusive privileges we bring to you.</p>
+
+              <a href="./suggest2.html">
+              <button class="flex1">
+                <span>View more</span>
+                <i class="fas fa-arrow-circle-right"></i>
+              </button></a>
+            </p>
+          </div>
+          <div class="right">
+            <img
+            src="./image/luxury.jpg"
+            alt=""
+            width="500px" height="300px"
+          />
+           
+           
+            
+          </div>
+
+      
+        </div>
+        <div class="content flex top">
+          <div class="left">
+            <h3>WARMER WITH VINTAGE ROOM</h3>
+            <p>
+              Bringing great inspiration and energy by the spacious space of the vintage room. Enjoy your vacation with your family 
+            </p>
+<a href="./suggest3.html">
+            <button class="flex1">
+              <span>View more</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button></a>
+            
+          
+          </div>
+          <div class="right">
+            <img
+            src="./image/visualsofdana-T5pL6ciEn-I-unsplash.jpg"
+            alt=""
+            width="500px" height="300px"
+          />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="rooms" id="rooms">
+      <div class="container">
+        <div class="heading">
+         
+          <h1>OUR HOTEL</h1>
+        </div>
+  <div class="background">
+        <div class="content grid2 mtop">
+          <div class="box flex">
+            <div class="left">
+              <img src="./image/thiet-ke-khach-san-hien-dai-5-sao-13-tang-so-huu-khong-gian-nghi-duong-hoan-hao-1.jfif" alt="">
+            </div>
+            <div class="right">
+              <h2>DASAN HA NOI</h2>
+              <div class="rate flex">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p> 
+
+               DASAN Ha Noi located in the modern, quiet and fresh Xala New Urban Area, right in the heart of Ha Dong District, Hanoi. Comfort and convenience are the first impressions when visitors arrive here.                
+                
+                </p>
+              <h5>From 1.000.000 VND/night</h5>
+              <button class="flex1"><a href="./roomdetailhanoi.html">
+                <span>Check Now</span></a>
+                <i class="fas fa-arrow-circle-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="left">
+              <img src="./image/dlg-hotel-danang-khach-san-4-sao-ven-bien-da-nang-1568778998.jpg" alt="" >
+            </div>
+            <div class="right">
+              <h2>DASAN DA NANG</h2>
+              <div class="rate flex">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p> DASAN Da Nang hotel is located in a prime location, between the romantic Han River on one side and the most beautiful beach in Central Vietnam on the other. </p>
+              <h5>From 1.000.000 VND/night</h5>
+              <button class="flex1"><a href="./roomdetaildanang.html">
+                <span>Check now</span></a>
+                <i class="fas fa-arrow-circle-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="left">
+              <img src="./image/hochiminh.jpg" alt="">
+            </div>
+            <div class="right">
+              <h2>DASAN HO CHI MINH</h2>
+              <div class="rate flex">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p> Located in the center of Phu Nhuan district - City. Ho Chi Minh City with convenient traffic location both by road and by air, DASAN Ho Chi Minh is built according to 5-star standard with 239 luxurious rooms along with high-class utility system.</p>
+              <h5>From 1.000.000 VND/night</h5>
+              <button class="flex1"><a href="./roomdetailhcm.html">
+                <span>Check Now</span></a>
+                <i class="fas fa-arrow-circle-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="left">
+              <img src="./image/a6cbb9f91a47fc4658f5fb179a943091.jpg" alt="">
+            </div>
+            <div class="right">
+              <h2>DASAN PHAN THIET</h2>
+              <div class="rate flex">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p> With a system of fully-equipped rooms, restaurant, conference center, massage, karaoke, coffee bar ... equipped with modern, sophisticated and harmonious design, DASAN Phan Thiet is definitely a great destination. when you arrive at Phan Thiet.</p>
+              <h5>From 1.000.000 VND/night</h5>
+              <button class="flex1" ><a href="./roomdetailphanthiet.html">
+                <span>Check Now</span></a>
+                <i class="fas fa-arrow-circle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+   
+    <!--  reservation-->
+    <section class="reservation" id="reservation">
+<div class="container"> 
+  <h1>MAKE YOUR RESERVATION</h1>
+  <div class="background">
+      <form action="" method="post" >
+        <div class="right2">
+          <h4>Selected Room Information</h4>
+
+<div class="form_row">
+  <label class="label" for="branch">Branch</label>
+  <select class="input" name="branch" id="branch">
+    <option>Ho Chi Minh</option>
+    <option>Da Nang</option>
+    <option>Phan Thiet</option>
+    <option>Ha Noi</option>
+  </select>
+
+</div>  
+<div class="form_row">
+  <label class="label" for="payment">Payment Method</label>
+  <select name="payment" id="payment">
+    <option>Deluxe King</option>
+    <option>Deluxe Triple</option>
+    <option>Deluxe Queen</option>
+    <option>Deluxe Twin</option>
+    <option>Deluxe Double</option>
+  </select>
+</div>
+<div class="form_row">
+  <label class="label" for="adults">Adults</label>
+ <input class="input" type="text" id="adult">
+</div>          
+<div class="form_row">
+  <label class="label" for="child">Children</label>
+ <input class="input" type="text" id="child">
+</div>  
+<div class="form_row">
+  <label class="label" for="date">From</label>
+ <input class="input" type="date" id="date"> <label class="label" for="date">&emsp;To</label>  <input type="date" id="date">
+ 
+</div>  
+
+ 
+        </div>
+        <div class="left2">
+          <h4>Your information</h4>
+          <div class="form_row">
+
+          <label class="label">Full name</label>
+          <input class="input" type="text" name="name" required maxlength="50" placeholder="enter your name" >
+          </div>
+          <div class="form_row">
+
+          <label class="label">Email</label>
+          <input class="input" type="email" name="email" required maxlength="50" placeholder="enter your email" >
+          </div>
+          <div class="form_row">
+
+          <label class="label">Phone No</label>
+          <input class="input" type="number" name="number" required maxlength="10" min="0" max="9999999999" placeholder="enter your number" >
+          </div><div class="form_row">
+            <label class="label" for="payment">Payment Method</label>
+            <input class="input" name="payment" id="payment">
+           
+            </input>
+          </div>
+          <div class="form_row">
+
+          <label class="label">Notes</label>
+          <textarea class="input" name="msg" required maxlength="1000" placeholder="enter your message" cols="30" rows="10"></textarea>
+         
+        </div>
+       
+        
+      
+        </div>
+        <button id="myBtn">Send Request</button>
+
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+     <!-- Modal content -->
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <p>YOUR APPLICATION IS RECEIVED ! WE WILL CONTACT FOR DETAILS CONSULTANCY IN THE MINEST TIME. THANK YOU!</p>
+     </div>
+   </div>
+   <script>
+     // Get the modal
+     var modal = document.getElementById("myModal");
+
+     // Get the button that opens the modal
+     var btn = document.getElementById("myBtn");
+
+     // Get the <span> element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+
+     // When the user clicks on the button, open the modal
+     btn.onclick = function () {
+       modal.style.display = "block";
+     };
+
+     // When the user clicks on <span> (x), close the modal
+     span.onclick = function () {
+       modal.style.display = "none";
+     };
+
+     // When the user clicks anywhere outside of the modal, close it
+     window.onclick = function (event) {
+       if (event.target == modal) {
+         modal.style.display = "none";
+       }
+     };
+   </script>
+   
+        </form>
+      </div>
+    </div>
+   </section>
+   <section class="gallery">
+    <div class="container">
+      <h1>OUR GALLERY</h1>
+    <div class="container1">
+
+      <!-- Full-width images with number text -->
+      <div class="mySlides">
+          <img src="./image/slide1.jfif" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+       
+          <img src="./image/slide2.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        
+          <img src="./image/slide3.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+       
+          <img src="./image/cafe.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+       
+          <img src="./image/breakfast-buffet.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+       
+          <img src="./image/buffet.jpg" style="width:100%">
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="./image/slide1.jfif" width:100%" onclick="currentSlide(1)" alt="The Woods">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./image/slide2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./image/slide3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./image/cafe.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./image/breakfast-buffet.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./image/buffet.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+        </div>
+      </div>
+    </div></div>
+    <script>
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+    </script>
+
+   </section>
+<section>
+  <footer>
+    <!-- Hinh logo -->
+    <div class="k1">
+      <img class="logo" src="./image/logo.png" />
+    </div>
+    <!-- Thong tin khach san -->
+    <div class="k2">
+      <h3>DASAN HOTELS</h3>
+      <p id="address">
+        Ho Chi Minh City branch Times Square Building 22-36 Nguyen Hue|
+        District 1| HCMC | Vietnam
+        <br />
+        +84 (0) 28 3823 6688
+        <br />
+        The Hanoi branch 8 Do Duc Duc, Me Tri, Tu Liem, Hanoi
+        <br />
+        +84 (0) 28 3823 6666
+        <br />
+        <br />
+        Da Nang branch Son Tra Peninsula, Da Nang, Vietnam
+        <br />
+        +84 (0) 28 3823 6888 Phan Thiet Branch 5 Nguyen Dinh Chieu, Phu Hai,
+        Phan Thiet City, Binh Thuan
+        <br />
+        +84 (0) 28 3823 8888
+        <br />
+        info@dasanhotels.com
+      </p>
+    </div>
+    <!-- Link -->
+    <div class="k3">
+      <a href="#">Our Hotels</a>
+      <br />
+      <a href="#">Our Conferencing</a>
+      <br />
+      <a href="#">Our Company</a>
+    </div>
+    <!-- Dang ki nhan thong bao -->
+    <div class="k4">
+      <div>
+        <label for="emailAdd">Subcribe for Offers</label>
+        <br />
+        <input
+          type="text"
+          id="emailAdd"
+          placeholder="nguyenvanteo@gmail.com"
+        />
+      </div>
+
+      <button type="submit" id="subcribe">Subcribe Now</button>
+    </div>
+  </footer>
+</section>   
+
+  </body>
+</html>
