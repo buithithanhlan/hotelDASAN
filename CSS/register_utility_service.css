@@ -152,9 +152,6 @@ html {
 }
 
 /* CÁC PHẦN TRONG CHOOSE UTILITY - TABLE*/
-.rowUtility {
-  /* background-color: white; */
-}
 .rowUtility td:nth-child(1) {
   text-align: center;
 }
@@ -169,6 +166,12 @@ html {
 .rowUtility td:nth-child(2) p {
   margin-bottom: 50px;
 }
+#containerTick1,
+#containerTick2 {
+  width: 40px;
+  height: 40px;
+  margin-right: 50px;
+}
 .rowUtility td:nth-child(3) span {
   font-family: Arial, Helvetica, sans-serif;
   background-color: white;
@@ -177,13 +180,10 @@ html {
   font-weight: 600;
   font-size: 40px;
   display: block;
-  width: 40px;
-  height: 40px;
   line-height: 40px;
   border: solid 1px black;
   border-radius: 7px;
   /* margin: auto; */
-  margin-right: 50px;
 }
 .rowUtility td:nth-child(3) span:hover {
   background-color: var(--color-title);
@@ -440,4 +440,46 @@ html {
   background-color: #20bf55;
   color: black;
   cursor: pointer;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Mobile */
+@media screen and (max-width: 740px) {
+  body {
+    font-size: 10px;
+  }
+  /* TITLE */
+  .title {
+    width: 200px;
+    margin: 50px auto 70px auto;
+  }
+  .title h1 {
+    color: var(--color-title);
+    font-family: var(--font-title);
+    font-size: 15px;
+  }
+  .second h1 {
+    font-size: 10px;
+  }
+  .title p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /*  */
+  .row1 {
+    flex-direction: column;
+  }
+  .row2 {
+    flex-direction: column;
+  }
+  .item {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* TABLE */
+  .containerUtility {
+    width: 100%;
+  }
 }

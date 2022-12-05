@@ -127,7 +127,9 @@
         </td>
         <td>
           <div id="containerTick1">
-            <span id="tick1" onclick="tick()"> + </span>
+            <span id="tick1" onclick="tick1()" title="Click to select">
+              +
+            </span>
           </div>
         </td>
       </tr>
@@ -159,7 +161,9 @@
         </td>
         <td>
           <div id="containerTick2">
-            <span id="tick2" onclick="tick()"> + </span>
+            <span id="tick2" onclick="tick2()" title="Click to select">
+              +
+            </span>
           </div>
         </td>
       </tr>
@@ -305,65 +309,5 @@
     <div class="footer">
       <h1>FOOTER</h1>
     </div>
-
-    <!--  -->
-    <script>
-      // Modal Form
-      var modal = document.getElementById("bgModal");
-      var close = document.getElementById("close");
-
-      function popUp() {
-        modal.style.display = "block";
-      }
-
-      close.onclick = function () {
-        modal.style.display = "none";
-      };
-
-      // Modal Message
-      var modalMessage = document.getElementById("modalSendSuccess");
-      var close_2 = document.getElementById("okClose");
-
-      function popUpMessage() {
-        modal.style.display = "none";
-        modalMessage.style.display = "block";
-      }
-
-      close_2.onclick = function () {
-        modalMessage.style.display = "none";
-      };
-
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-        if (event.target == modalMessage) {
-          modalMessage.style.display = "none";
-        }
-      };
-
-      //TICKED
-      function tick() {
-        console.log("ALO");
-        let iconTicked =
-          "<div onclick='cancelTicked()'><img class='ticked' id='ticked' src='./Media/image/ticked.png' /></div>";
-
-        let tick1 = document.getElementById("tick1");
-        let tick2 = document.getElementById("tick2");
-        let cTick1 = document.getElementById("containerTick1");
-        let cTick2 = document.getElementById("containerTick2");
-
-        tick1.onclick = function () {
-          cTick1.innerHTML = iconTicked;
-        };
-        tick2.onclick = function () {
-          cTick2.innerHTML = iconTicked;
-        };
-      }
-      // function cancelTicked() {
-      //   document.getElementById("res").innerHTML =
-      //     "<span onclick='tick()'> + </span>";
-      // }
-    </script>
   </body>
 </html>
