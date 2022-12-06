@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+}
+.title {
+  background-color: #ebe6e6;
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  margin: 2px;
+}
+.title span {
+  color: #dfaa5b;
+}
+.introduce1 span {
+  color: #dfaa5b;
+  font-size: 32px;
+  font-weight: bolder;
+}
+.imgIntroduce {
+  margin-left: 30px;
+  width: 600px;
+  height: 400px;
+}
+.introduce1,
+.introduce2 {
+  margin-top: 50px;
+}
+.around1 {
+  background-color: black;
+  max-width: 560px;
+  max-height: 320px;
+}
+.around2 {
+  background-color: #dfaa5b;
+  max-width: 510px;
+  max-height: 320px;
+}
+.imgRight {
+  text-align: right;
+}
+/* For Tablet */
+@media all and (max-width: 768px) {
+  * {
+    font-size: 18px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .introduce1,
+  .introduce2 {
+    margin-top: 20px;
+  }
+  .introduce1 span {
+    font-size: 20px;
+  }
+  .imgIntroduce {
+    margin-left: 30px;
+    width: 400px;
+    height: 300px;
+  }
+  .around1 {
+    background-color: black;
+    max-width: 420px;
+    max-height: 280px;
+  }
+  .around2 {
+    background-color: #dfaa5b;
+    max-width: 420px;
+    max-height: 280px;
+  }
+}
