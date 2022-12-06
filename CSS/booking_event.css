@@ -4,8 +4,6 @@ body,
 html {
   margin: 0;
   padding: 2px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* MENU */
@@ -13,12 +11,15 @@ html {
 /* DẤU TRANG */
 .dautrang {
   background-image: url(../images/Dautrang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   height: 400px;
 }
 
 .dautrang h1 {
   margin-top: 0px;
-  padding-top: 200px;
+  line-height: 400px;
   font-family: "Ubuntu", sans-serif;
   color: white;
   font-weight: bold;
@@ -267,4 +268,178 @@ select:hover {
   cursor: pointer;
   background-color: black;
   color: #dfaa5b;
+}
+
+/* RESPONSIVE */
+/* Mobile */
+@media screen and (max-width: 600px) {
+  /* DẤU TRANG */
+  .containerDauTrang {
+    width: 100%;
+  }
+  .dautrang {
+    /* background-position: center; */
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .dautrang h1 {
+    line-height: 30px;
+    font-size: 25px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+    width: 90%;
+  }
+
+  /* PAGE CONTENT */
+  .page-content {
+    width: 90%;
+  }
+
+  /* ============================================================ CONTENT TOP */
+  .content-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+    height: auto;
+    padding: 15px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .content-top .title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .content-top .title p {
+    margin: 0 0 20px 0;
+  }
+  .content-top .text {
+    flex: 1;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+    min-width: 250px;
+    width: 80%;
+    margin: 20px 0 0 0;
+  }
+
+  /* ======================================================== CONTENT BOTTOM*/
+  .content-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    margin: 30px 0 0 0;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  .content-bottom .content {
+    width: 100%;
+    padding: 0;
+    border: solid 1px none;
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .content-bottom .title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    width: 80%;
+    padding: 10px;
+    margin: 25px auto 15px;
+  }
+  .content-bottom .text {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 10px 0 0;
+  }
+  .content-bottom img {
+    width: 94%;
+    height: auto;
+    margin: 0 0 10px;
+    box-shadow: none;
+    padding: 10px 10px 0 10px;
+  }
+  .content-bottom .title p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  /* SELECT BRANCH */
+  .select {
+    margin: 40px auto;
+  }
+  .select select {
+    font-size: 18px;
+    padding: 10px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  /* ========================================= */
+  .table {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px;
+  }
+
+  .table tr td {
+    font-size: 15px;
+  }
+
+  .table tr:nth-child(3) td:first-child {
+    border-left: solid 2px;
+  }
+  .table tr:nth-child(3) td:last-child {
+    border-right: solid 2px;
+  }
+
+  .table tr:nth-child(4) td:first-child {
+    border-left: solid 2px;
+  }
+  .table tr:nth-child(4) td:last-child {
+    border-right: solid 2px;
+  }
+
+  .table tr:nth-child(5) td:nth-child(1) {
+    border-left: solid 2px;
+    border-bottom: solid 2px;
+  }
+  .table tr:nth-child(5) td:nth-child(2),
+  .table tr:nth-child(5) td:nth-child(3),
+  .table tr:nth-child(5) td:nth-child(4) {
+    border-bottom: solid 2px;
+  }
+  .table tr:nth-child(5) td:nth-child(4) {
+    border-right: solid 2px;
+  }
+
+  .table tr th {
+    font-size: 20px;
+    padding: 0 50px;
+    height: 70px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    border-left: solid 2px;
+  }
+
+  .table .black {
+    border-right: solid 2px;
+    border-left: solid 2px;
+  }
+
+  .button {
+    font-size: 15px;
+    width: 80px;
+    height: 35px;
+    margin: 0 5px 0 10px;
+  }
 }
