@@ -1,14 +1,11 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 html,
 body {
   font-family: "Anek Latin";
   scroll-behavior: smooth;
   width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -193,6 +190,7 @@ li.dropdown {
   color: white;
   padding-top: 10%;
   font-weight: bold;
+  margin-top: 0;
 }
 
 .home p {
