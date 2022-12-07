@@ -12,18 +12,6 @@ html {
   --font-time: "Arial";
 }
 
-/* HEADER */
-.header,
-.header h1 {
-  text-align: center;
-  line-height: 80px;
-  background-color: black;
-  height: 80px;
-  color: white;
-  text-shadow: 0 0 20px white;
-  margin: 0;
-}
-
 /* INTRODUCE */
 .container_intro {
   display: flex;
@@ -79,7 +67,7 @@ html {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 600px;
-  width: 450px;
+  width: 400px;
   height: 330px;
   margin-bottom: 20px;
   position: relative;
@@ -145,7 +133,7 @@ span {
 }
 .item:nth-child(1) {
   margin-right: 80px;
-  margin-left: 250px;
+  margin-left: 170px;
 }
 .item:nth-child(2) {
   margin-right: 50px;

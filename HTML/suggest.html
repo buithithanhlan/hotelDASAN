@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/suggest.css" />
 
     <script src="https://kit.fontawesome.com/95ad6bdf22.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
     <link
@@ -27,61 +28,7 @@
 
 </head>
 <body>
-  <section>
-    <header class="header">
-      <div class="container">
-        <nav class="navbar flex1">
-          <ul class="nav-menu">
-            <li>
-              <div class="logo">
-                <img class="img_logo" src="../image/logo.png" alt="" />
-              </div>
-            </li>
-            <li class="signin"><a href="#home">Sign in</a></li>
-            <li class="aboutus"><a href="#about">About Us</a></li>
-            <li><a href="#room">Booking room</a></li>
-            <li><a href="#services">Service pack</a></li>
-            <li><a href="#shop">Booking event</a></li>
-            <li><a href="#testimonials">Promotion</a></li>
-            <li class="dropdown">
-              <a class="drop"
-                >EN &nbsp;<img
-                  class="img_flag"
-                  src="../image/EN.png"
-              /></a>
-              <div class="dropdown__content">
-                <a href="trang-tieng-viet"
-                  >VI &nbsp;<img
-                    class="img_flag"
-                    src="../image/VN.png"
-                /></a>
-              </div>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hamburger.addEventListener("click", mobliemmenu);
-
-      function mobliemmenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      }
-
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
-    </script>
+  <div id="header"></div>
    </section>
     <section class="home" id="home">
         <div class="container">
@@ -91,11 +38,11 @@
       </section>
       <section id="content" class="content">
         <div class="container">
-        <p>You’ll be inspired from the moment you enter, because your Classic Room at our beach resort has been evocatively fashioned after traditional Vietnamese architecture and offers thoughtful touches at every turn. Enjoy fresh breezes in the generous indoor-outdoor living spaces. Sink into the oversized marble tub or extra-comfortable king or queen beds, or welcome friends for evening drinks on your terrace overlooking the gardens and sea.</p>
+        <p id="descrip">&nbsp; You’ll be inspired from the moment you enter, because your Classic Room at our beach resort has been evocatively fashioned after traditional Vietnamese architecture and offers thoughtful touches at every turn. Enjoy fresh breezes in the generous indoor-outdoor living spaces. Sink into the oversized marble tub or extra-comfortable king or queen beds, or welcome friends for evening drinks on your terrace overlooking the gardens and sea.</p>
     <br>
     <hr>
     <div class="content flex top">
-        <div class="left">
+        <div class="left_slide">
             <div class="row">
             <i class="fa-regular fa-square"></i>
             <span class="title">SIZE</span><span class="p">70sqm</span> 
@@ -109,7 +56,7 @@
     <span class="title">VIEW</span> <span class="p">Sea and gardens
     </span></div>
         </div>
-        <div class="right">
+        <div class="right_slide">
             <div class="row">
             <i class="fa-solid fa-user"></i>
             <span class="title">OCCUPANCY</span><span class="p"> Up to three adults or two adults and two children under 12 years</span>
@@ -134,43 +81,48 @@
     <div class="container">
         <h1>ROOM AMENITIES</h1>
         <div class="content">
-            <div class="left">
+            <div class="left_slide">
             <p>King bedroom with TV and desk
                 <br>
                 <br>
                 <hr>
                 <br>
-Oversized bathroom with double vanities, rain shower, and separate marble tub
-<br>
-<br>
-<hr>
-<br>
-Terrace with seating for relaxation in the fresh air
-<br>
-<br>
-<hr>
-<br>
-Bose sound system</p>
-</div>
-<div class="right">
-    <div id="slideshow">
-        <div class="slide-wrapper">
-            <div class="slide"><img src="../images/ICPQ_Resort-Classic-Ocean-View1-1-870x555.jpg"></div>
-            <div class="slide"><img src="../images/phong-Deluxe-King.png"></div>
-            <div class="slide"><img src="../images/1.2+Alma+-+Ocean+View+Suite+1+Bedroom.jpg"></div>
-        </div>
+                Oversized bathroom with double vanities, rain shower, and separate marble tub
+                <br>
+                <br>
+                <hr>
+                <br>
+                Terrace with seating for relaxation in the fresh air
+                <br>
+                <br>
+                <hr>
+                <br>
+                Bose sound system</p>
+                </div>
+      <div class="right_slide">
+            <div id="slideshow">
+              <div class="slide-wrapper">
+                  <div class="slide"><img src="../images/ICPQ_Resort-Classic-Ocean-View1-1-870x555.jpg"></div>
+                  <div class="slide"><img src="../images/phong-Deluxe-King.png"></div>
+                  <div class="slide"><img src="../images/1.2+Alma+-+Ocean+View+Suite+1+Bedroom.jpg"></div>
+              </div>
+            </div>
       </div>
-</div>
-</div>
+      <div class="button_suggest">
+        <a href="./bookingroom.html"><button >
+            <i class="fa-solid fa-arrow-left-long"></i><span> BACK</span>
+        </button></a>
+</div>   </div>
 
          </section>
-         <div class="button">
-            <a href="./bookingroom.html"><button >
-                <i class="fa-solid fa-arrow-left-long"></i><span>BACK</span>
-        
-            </button></a>
-        </div>
 
-    
+     
+        <div id="footer"></div>
+        <script>
+          $(function () {
+            $("#header").load("MENU.html");
+            $("#footer").load("footer.html");
+          });
+        </script>
 </body>
 </html>

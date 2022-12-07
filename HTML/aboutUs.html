@@ -12,8 +12,10 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
+    <div id="header"></div>
     <div class="title">
       <p>
         <span>DASAN</span> is known as the most luxurious hotel and the only
@@ -22,7 +24,7 @@
     </div>
 
     <div class="around1">
-      <div class="imgRight">
+      <div id="imgRight1" class="imgRight">
         <img class="imgIntroduce" src="../images/breakfast-buffet.jpg" />
       </div>
     </div>
@@ -32,22 +34,23 @@
       <p>
         <span>With vision: </span>
         <br />
-        We are determined to successfully build world-class hotel services so
-        that DASAN Hotels becomes the leading hotel brand, reputable and
-        position in the field of accommodation and resort services in Vietnam.
-        And expand the scope of activities nationwide.
+        &nbsp; We are determined to successfully build world-class hotel
+        services so that DASAN Hotels becomes the leading hotel brand, reputable
+        and position in the field of accommodation and resort services in
+        Vietnam. And expand the scope of activities nationwide.
         <br />
         <span>With the mission: </span>
         <br />
-        Create a new definition of hotel service quality in Ho Chi Minh City,
-        Hanoi, Da Nang, Phan Thiet by providing the best services to customers.
-        Turn DASAN hotel into a second home for guests staying. Thereby
-        contributing to the economic development of the locality, through
-        contributing to the budget, creating many job opportunities, building a
-        civilized and professional working environment, improving the quality of
-        people's lives. labor and support community activities.
+        &nbsp;Create a new definition of hotel service quality in Ho Chi Minh
+        City, Hanoi, Da Nang, Phan Thiet by providing the best services to
+        customers. Turn DASAN hotel into a second home for guests staying.
+        Thereby contributing to the economic development of the locality,
+        through contributing to the budget, creating many job opportunities,
+        building a civilized and professional working environment, improving the
+        quality of people's lives. labor and support community activities.
       </p>
     </div>
+
     <div class="around2">
       <div class="imgRight">
         <img class="imgIntroduce" src="../images/food4.jpg" />
@@ -57,25 +60,34 @@
 
     <div class="introduce2">
       <p>
-        Possessing a proud position on the high floors of the famous Times
-        Square building in District 1 Saigon, the hotel offers world-class
+        &nbsp; Possessing a proud position on the high floors of the famous
+        Times Square building in District 1 Saigon, the hotel offers world-class
         services, exquisite Italian-style interior design and distinct luxury.
         <br /><br />
-        We are delighted to welcome you back to experience your luxurious stay
-        in the heart of Saigon. With professional services, modern facilities,
-        world-class cuisine and luxurious space, once again enjoy the moments of
-        complete rest at DASAN.
+        &nbsp; We are delighted to welcome you back to experience your luxurious
+        stay in the heart of Saigon. With professional services, modern
+        facilities, world-class cuisine and luxurious space, once again enjoy
+        the moments of complete rest at DASAN.
         <br /><br />
-        More than expected as a place of dazzling beauty and modernity, the
-        DASAN hotel is located on a high floor offering a stunning view of the
-        city that is second to none. There is only one Saigon, and only one
+        &nbsp; More than expected as a place of dazzling beauty and modernity,
+        the DASAN hotel is located on a high floor offering a stunning view of
+        the city that is second to none. There is only one Saigon, and only one
         DASAN, unique in one of Southeast Asia's most dynamic and colorful
         destinations. You have never seen or experienced anything like it in
         Vietnam before…
         <br /><br />
-        In addition to Saigon, DASAN also has branches in Hanoi, Da Nang, and
-        Phan Thiet.
+        &nbsp; In addition to Saigon, DASAN also has branches in Hanoi, Da Nang,
+        and Phan Thiet.
       </p>
     </div>
+    <div id="footer"></div>
   </body>
+  <script>
+    window.onload = function () {
+      $(function () {
+        $("#header").load("MENU.html");
+        $("#footer").load("footer.html");
+      });
+    };
+  </script>
 </html>

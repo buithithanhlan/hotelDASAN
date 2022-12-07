@@ -11,6 +11,8 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <style>
       @import url(../CSS/roomdetailphanthiet.css);
 
@@ -19,62 +21,7 @@
     </style>
   </head>
   <body>
-    <section>
-      <header class="header">
-        <div class="container">
-          <nav class="navbar flex1">
-            <ul class="nav-menu">
-              <li>
-                <div class="logo">
-                  <img class="img_logo" src="../images/logo.png" alt="" />
-                </div>
-              </li>
-              <li class="signin"><a href="#home">Sign in</a></li>
-              <li class="aboutus"><a href="#about">About Us</a></li>
-              <li><a href="#room">Booking room</a></li>
-              <li><a href="#services">Service pack</a></li>
-              <li><a href="#shop">Booking event</a></li>
-              <li><a href="#testimonials">Promotion</a></li>
-              <li class="dropdown">
-                <a class="drop"
-                  >EN &nbsp;<img
-                    class="img_flag"
-                    src="../images/EN.png"
-                /></a>
-                <div class="dropdown__content">
-                  <a href="trang-tieng-viet"
-                    >VI &nbsp;<img
-                      class="img_flag"
-                      src="../images/VN.png"
-                  /></a>
-                </div>
-              </li>
-            </ul>
-            <div class="hamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-  
-        hamburger.addEventListener("click", mobliemmenu);
-  
-        function mobliemmenu() {
-          hamburger.classList.toggle("active");
-          navMenu.classList.toggle("active");
-        }
-  
-        window.addEventListener("scroll", function () {
-          var header = document.querySelector("header");
-          header.classList.toggle("sticky", window.scrollY > 0);
-        });
-      </script>
-     </section>
+    <div id="header"></div>
     <section class="home" id="home">
       <div class="container">
         <h1>PHAN THIET</h1>
@@ -270,7 +217,7 @@
                 <select class="input" name="branch" id="branch">
                   <option>Ho Chi Minh</option>
                   <option>Da Nang</option>
-                  <option>Da Lat</option>
+                  <option>Phan Thiet</option>
                   <option>Ha Noi</option>
                 </select>
               </div>
@@ -298,7 +245,6 @@
                 <label class="label" for="date">&emsp;To</label>
                 <input type="date" id="date" />
               </div>
-           
             </div>
             <div class="left2">
               <h2>Your information</h2>
@@ -337,12 +283,7 @@
                   placeholder="enter your number"
                 />
               </div>
-              <div class="form_row">
-                <label class="label" for="payment">Payment Method</label>
-                <input class="input" name="payment" id="payment">
-               
-                </input>
-              </div>
+
               <div class="form_row">
                 <label class="label">Notes</label>
                 <textarea
@@ -355,47 +296,21 @@
                   rows="10"
                 ></textarea>
               </div>
+              <a href="./payment.html"
+                ><button id="myBtn">Make payment</button></a
+              >
             </div>
-            <button id="myBtn">Send Request</button>
 
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>YOUR APPLICATION IS RECEIVED ! WE WILL CONTACT FOR DETAILS CONSULTANCY IN THE MINEST TIME. THANK YOU!</p>
-              </div>
-            </div>
             <script>
-              // Get the modal
-              var modal = document.getElementById("myModal");
-         
-              // Get the button that opens the modal
-              var btn = document.getElementById("myBtn");
-         
-              // Get the <span> element that closes the modal
-              var span = document.getElementsByClassName("close")[0];
-         
-              // When the user clicks on the button, open the modal
-              btn.onclick = function () {
-                modal.style.display = "block";
-              };
-         
-              // When the user clicks on <span> (x), close the modal
-              span.onclick = function () {
-                modal.style.display = "none";
-              };
-         
-              // When the user clicks anywhere outside of the modal, close it
-              window.onclick = function (event) {
-                if (event.target == modal) {
-                  modal.style.display = "none";
-                }
-              };
+              $(function () {
+                $("#header").load("MENU.html");
+                $("#footer").load("footer.html");
+              });
             </script>
           </form>
         </div>
       </div>
     </section>
+    <div id="footer"></div>
   </body>
 </html>

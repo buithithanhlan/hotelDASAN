@@ -4,22 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Utility Service Page</title>
+    <title>Reserve Utility Service Page</title>
     <link rel="stylesheet" href="../CSS/register_utility_service.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="../JS/register_utility_service.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
     <!-- HEADER -->
-    <div class="header">
-      <h1>HEADER</h1>
-    </div>
+    <div id="header"></div>
     <!-- TITLE -->
     <div class="title">
-      <h1>REGISTER TO USE SERVICE UTILITIES</h1>
+      <h1>RESERVE TO USE SERVICE UTILITIES</h1>
       <p>
         We want your stay with us to be as special and easy as possible. Dasan
         has carefully built a list of services and amenities with just that in
@@ -107,7 +106,7 @@
           </p>
           <p>
             (Note: Persons under the age of 18 are not allowed to visit or
-            register for this service!)
+            reserve for this service!)
           </p>
         </div>
       </div>
@@ -190,7 +189,7 @@
 
     <!-- Button Register -->
     <div class="btnSendReq">
-      <input type="button" value="Register" onclick="popUp()" />
+      <input type="button" value="Reserve" onclick="popUp()" />
     </div>
 
     <!-- MODAL POPUP -->
@@ -240,7 +239,12 @@
             <tr>
               <td><label for="numPeopleRes">Number of people</label></td>
               <td>
-                <input type="number" name="numPeopleRes" id="numPeopleRes" />
+                <input
+                  type="number"
+                  min="1"
+                  name="numPeopleRes"
+                  id="numPeopleRes"
+                />
               </td>
             </tr>
             <tr>
@@ -306,8 +310,6 @@
     </div>
 
     <!-- FOOTER -->
-    <div class="footer">
-      <h1>FOOTER</h1>
-    </div>
+    <div id="footer"></div>
   </body>
 </html>

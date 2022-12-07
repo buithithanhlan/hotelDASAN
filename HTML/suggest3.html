@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Room</title>
+    <title>Vintage Room</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
    
     <link rel="stylesheet" href="../CSS/suggest3.css" />
 
@@ -27,62 +28,7 @@
 
 </head>
 <body>
-  <section>
-    <header class="header">
-      <div class="container">
-        <nav class="navbar flex1">
-          <ul class="nav-menu">
-            <li>
-              <div class="logo">
-                <img class="img_logo" src="../images/logo.png" alt="" />
-              </div>
-            </li>
-            <li class="signin"><a href="#home">Sign in</a></li>
-            <li class="aboutus"><a href="#about">About Us</a></li>
-            <li><a href="#room">Booking room</a></li>
-            <li><a href="#services">Service pack</a></li>
-            <li><a href="#shop">Booking event</a></li>
-            <li><a href="#testimonials">Promotion</a></li>
-            <li class="dropdown">
-              <a class="drop"
-                >EN &nbsp;<img
-                  class="img_flag"
-                  src="../images/EN.png"
-              /></a>
-              <div class="dropdown__content">
-                <a href="trang-tieng-viet"
-                  >VI &nbsp;<img
-                    class="img_flag"
-                    src="../images/VN.png"
-                /></a>
-              </div>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hamburger.addEventListener("click", mobliemmenu);
-
-      function mobliemmenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      }
-
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
-    </script>
-   </section>
+<div id="header"></div>
     <section class="home" id="home">
         <div class="container">
           <h1>Vintage Room</h1>
@@ -91,7 +37,7 @@
       </section>
       <section id="content" class="content">
         <div class="container">
-        <p> Bringing great inspiration and energy by the spacious space of the vintage room. Enjoy your vacation with your family </p>
+        <p id="descrip"> Bringing great inspiration and energy by the spacious space of the vintage room. Enjoy your vacation with your family! </p>
     <br>
     <hr>
     <div class="content flex top">
@@ -164,11 +110,18 @@ Bose sound system</p>
 </div>
          </section>
 
-    <div class="button">
+    <div class="button_suggest3">
         <a href="./bookingroom.html"><button >
-            <i class="fa-solid fa-arrow-left-long"></i><span>BACK</span>
+            <i class="fa-solid fa-arrow-left-long"></i><span> BACK</span>
 
         </button></a>
     </div>
+    <div id="footer"></div>
+    <script>
+      $(function () {
+        $("#header").load("MENU.html");
+        $("#footer").load("footer.html");
+      });
+    </script>
 </body>
 </html>

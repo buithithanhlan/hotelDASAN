@@ -12,17 +12,7 @@ html {
   --color-title: #dfaa5b;
   --font-time: "Arial";
 }
-/* HEADER */
-.header,
-.header h1 {
-  text-align: center;
-  line-height: 120px;
-  background-color: black;
-  height: 120px;
-  color: white;
-  text-shadow: 0 0 20px white;
-  margin: 0;
-}
+
 /* TITLE */
 .title {
   text-align: center;
@@ -61,7 +51,7 @@ html {
   margin: auto;
 }
 .item {
-  width: 435px;
+  width: 350px;
   height: 690px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -125,7 +115,7 @@ html {
   color: white;
 }
 .item p {
-  width: 350px;
+  width: 300px;
   margin-left: 30px;
   line-height: 35px;
   color: white;
@@ -218,18 +208,6 @@ html {
 }
 .btnSendReq input:hover {
   cursor: pointer;
-}
-
-/* FOOTER */
-.footer,
-.footer h1 {
-  text-align: center;
-  line-height: 180px;
-  background-color: black;
-  height: 180px;
-  color: white;
-  text-shadow: 0 0 20px white;
-  margin: 0;
 }
 
 /* MODAL POP UP */
@@ -482,4 +460,7 @@ html {
   .containerUtility {
     width: 100%;
   }
+}
+#myModal {
+  display: none;
 }

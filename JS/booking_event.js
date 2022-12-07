@@ -31,10 +31,11 @@ function selectBranch() {
   window.scrollTo(0, document.body.scrollHeight);
 }
 
-// window.onload = function () {
-// $(function () {
-//   $("#header").load("header.html");
-// });
+window.onload = function () {
+  $(function () {
+    $("#header").load("MENU.html");
+  });
+};
 
 let elements = document.getElementsByClassName("button");
 

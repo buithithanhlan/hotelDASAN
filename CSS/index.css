@@ -5,14 +5,32 @@
 body,
 html {
   margin: 0;
-  padding: 2px;
+  padding: 0;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* DẤU TRANG */
+.dautrang {
+  background-image: url(../images/Dautrang.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.dautrang h1 {
+  margin-top: 0px;
+  line-height: 400px;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+}
 /* CLIENT */
 .client {
-  width: 75%;
+  width: 78%;
   margin: 0 auto;
 }
 
@@ -39,21 +57,17 @@ html {
 
 .client .content h3 {
   color: white;
-  font-size: xx-large;
+  font-size: 30px;
+  text-align: left;
+  padding-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .client .content p {
-  font-size: x-large;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 30px;
+  line-height: 30px;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.review1 h3,
-.review1 p,
-.review2 h3,
-.review2 p,
-.review3 h3,
-.review3 p {
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* LEFT */
@@ -61,10 +75,10 @@ html {
   width: 320px;
 }
 .review1 h3 {
-  margin: 5px 20px 0 20px;
+  margin-top: 50px;
 }
 .review1 p {
-  margin: 20px 20px 0 20px;
+  margin: 20px 20px auto;
 }
 .review1 img {
   width: 290px;
@@ -129,7 +143,7 @@ html {
 /* ============================================= */
 /* PROMOTION */
 .promotion {
-  width: 90%;
+  width: 100%;
   margin: 40px auto;
 }
 
@@ -144,12 +158,15 @@ html {
 .promotion .content div {
   max-width: 220px;
   max-height: 400px;
+  padding: 10px 0;
   background-color: #faf8e4;
   flex: 1;
 }
 
 .promotion .content div p {
   font-weight: bold;
+  margin: 4px auto;
+  padding-bottom: 5px;
 }
 
 .promotion .content div img {
@@ -165,7 +182,7 @@ html {
   color: white;
   border: none;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -406,4 +423,7 @@ html {
     border-right: 3.5px solid !important;
     bottom: -7.1px !important;
   }
+}
+.more span:hover {
+  color: black;
 }

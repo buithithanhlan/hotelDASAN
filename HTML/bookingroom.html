@@ -9,8 +9,8 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../CSS/bookingroom..css" />
-
+    <link rel="stylesheet" href="../CSS/bookingroom.css" />
+    <script src="../JS/bookingroom.js" defer></script>
     
 
     <link
@@ -22,74 +22,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
   </head>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <style>
-    
-
     @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
     </style>
 
   <body>
-   <section>
-    <header class="header">
-      <div class="container">
-        <nav class="navbar flex1">
-          <ul class="nav-menu">
-            <li>
-              <div class="logo">
-                <img class="img_logo" src="../images/logo.png" alt="" />
-              </div>
-            </li>
-            <li class="signin"><a href="#home">Sign in</a></li>
-            <li class="aboutus"><a href="#about">About Us</a></li>
-            <li><a href="#room">Booking room</a></li>
-            <li><a href="#services">Service pack</a></li>
-            <li><a href="#shop">Booking event</a></li>
-            <li><a href="#testimonials">Promotion</a></li>
-            <li class="dropdown">
-              <a class="drop"
-                >EN &nbsp;<img
-                  class="img_flag"
-                  src="../images/EN.png"
-              /></a>
-              <div class="dropdown__content">
-                <a href="trang-tieng-viet"
-                  >VI &nbsp;<img
-                    class="img_flag"
-                    src="../images/VN.png"
-                /></a>
-              </div>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hamburger.addEventListener("click", mobliemmenu);
-
-      function mobliemmenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      }
-
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
-    </script>
-   </section>
+    <div id="header"></div>
     <section class="home" id="home">
       <div class="container">
         <h1>OUR ROOM</h1>
-        <p>Enjoy your vacation</p>
+        <p id="enjoy">Enjoy your vacation</p>
 
         <div class="content grid">
           <div class="box">
@@ -118,8 +62,8 @@
            </select>
           </div>
           <div class="box1">
-            <button class="flex1"><a href="#rooms">
-              <span >Check Availability</span>
+            <button id="firstFlex" class="flex1"><a href="#rooms">
+              <span >Check Availability</span> 
               <i class="fas fa-arrow-circle-right"></i>
             </button></a>
           </div>
@@ -129,21 +73,19 @@
    
     <section class="promotion" id="promotion">
       <div class="container">
-        <div id="slideshow">
+        <a href="./Uu_dai.html"><div id="slideshow">
           <div class="slide-wrapper">
             <div class="slide"><img src="../images/Hotel.png"></div>
             <div class="slide"><img src="../images/Black and Yellow Modern Black Friday Sale Facebook Ad.png"></div>
-               <div class="slide"><img src="../images/ Gold Modern Black Friday Sale Flyer.png"></div>
-          </div>
+            <div class="slide"><img src="../images/Black Gold Modern Black Friday Sale Flyer.png"></div>
+          </div></a>
         </div>
       </div>
     </section>
 
     <section class="suggest" id="suggest">
       <div class="container">
-        <div class="heading">
-          <h1>OUR SUGGEST</h1>
-        </div>
+          <h1>OUR SUGGESTIONS</h1>
         <div class="content flex top">
           <div class="left">
             <h3>RESORT CLASSIC ROOM OCEANVIEW</h3>
@@ -168,6 +110,7 @@
             
           </div>
         </div>
+        
         <!-- suggest2 -->
         <div class="content flex top1">
           <div class="left">
@@ -189,14 +132,10 @@
             src="../images/luxury.jpg"
             alt=""
             width="500px" height="300px"
-          />
-           
-           
-            
+          />     
           </div>
-
-      
         </div>
+      
         <div class="content flex top">
           <div class="left">
             <h3>WARMER WITH VINTAGE ROOM</h3>
@@ -208,9 +147,8 @@
               <span>View more</span>
               <i class="fas fa-arrow-circle-right"></i>
             </button></a>
-            
-          
           </div>
+
           <div class="right">
             <img
             src="../images/vintageroom.jpg"
@@ -219,14 +157,12 @@
           />
           </div>
         </div>
+       
       </div>
     </section>
     <section class="rooms" id="rooms">
       <div class="container">
-        <div class="heading">
-         
           <h1>OUR HOTEL</h1>
-        </div>
   <div class="background">
         <div class="content grid2 mtop">
           <div class="box flex">
@@ -248,10 +184,10 @@
                 
                 </p>
               <h5>From 1.000.000 VND/night</h5>
-              <button class="flex1"><a href="./roomdetailhanoi.html">
-                <span>Check Now</span></a>
+              <a href="./roomdetailhanoi.html"><button class="flex1">
+                <span>Check Now</span>
                 <i class="fas fa-arrow-circle-right"></i>
-              </button>
+              </button></a>
             </div>
           </div>
           <div class="box flex">
@@ -269,10 +205,10 @@
               </div>
               <p> DASAN Da Nang hotel is located in a prime location, between the romantic Han River on one side and the most beautiful beach in Central Vietnam on the other. </p>
               <h5>From 1.000.000 VND/night</h5>
-              <button class="flex1"><a href="./roomdetaildanang.html">
-                <span>Check now</span></a>
+              <a href="./roomdetaildanang.html"><button class="flex1">
+                <span>Check now</span>
                 <i class="fas fa-arrow-circle-right"></i>
-              </button>
+              </button></a>
             </div>
           </div>
           <div class="box flex">
@@ -290,10 +226,10 @@
               </div>
               <p> Located in the center of Phu Nhuan district - City. Ho Chi Minh City with convenient traffic location both by road and by air, DASAN Ho Chi Minh is built according to 5-star standard with 239 luxurious rooms along with high-class utility system.</p>
               <h5>From 1.000.000 VND/night</h5>
-              <button class="flex1"><a href="./roomdetailhcm.html">
-                <span>Check Now</span></a>
+              <a href="./roomdetailhcm.html"><button class="flex1">
+                <span>Check Now</span>
                 <i class="fas fa-arrow-circle-right"></i>
-              </button>
+              </button></a>
             </div>
           </div>
           <div class="box flex">
@@ -311,10 +247,10 @@
               </div>
               <p> With a system of fully-equipped rooms, restaurant, conference center, massage, karaoke, coffee bar ... equipped with modern, sophisticated and harmonious design, DASAN Phan Thiet is definitely a great destination. when you arrive at Phan Thiet.</p>
               <h5>From 1.000.000 VND/night</h5>
-              <button class="flex1" ><a href="./roomdetailphanthiet.html">
-                <span>Check Now</span></a>
+              <a href="./roomdetailphanthiet.html"><button class="flex1" >
+                <span>Check Now</span>
                 <i class="fas fa-arrow-circle-right"></i>
-              </button>
+              </button></a>
             </div>
           </div>
         </div>
@@ -342,8 +278,8 @@
 
 </div>  
 <div class="form_row">
-  <label class="label" for="payment">Payment Method</label>
-  <select name="payment" id="payment">
+  <label class="label" for="payment">Roomtype</label>
+  <select class="input" name="payment" >
     <option>Deluxe King</option>
     <option>Deluxe Triple</option>
     <option>Deluxe Queen</option>
@@ -361,14 +297,15 @@
 </div>  
 <div class="form_row">
   <label class="label" for="date">From</label>
- <input class="input" type="date" id="date"> <label class="label" for="date">&emsp;To</label>  <input type="date" id="date">
+ <input class="input" type="date" id="date">
+  <label class="label" for="date">&emsp;To</label>  <input class="input" type="date" id="date">
  
 </div>  
 
  
         </div>
         <div class="left2">
-          <h4>Your information</h4>
+          <h4>Your Information</h4>
           <div class="form_row">
 
           <label class="label">Full name</label>
@@ -383,11 +320,6 @@
 
           <label class="label">Phone No</label>
           <input class="input" type="number" name="number" required maxlength="10" min="0" max="9999999999" placeholder="enter your number" >
-          </div><div class="form_row">
-            <label class="label" for="payment">Payment Method</label>
-            <input class="input" name="payment" id="payment">
-           
-            </input>
           </div>
           <div class="form_row">
 
@@ -397,9 +329,9 @@
         </div>
        
         
-      
+        <div><button >Send Request</button></div>
         </div>
-        <button id="myBtn">Send Request</button>
+      
 
    <!-- The Modal -->
    <div id="myModal" class="modal">
@@ -409,34 +341,8 @@
        <p>YOUR APPLICATION IS RECEIVED ! WE WILL CONTACT FOR DETAILS CONSULTANCY IN THE MINEST TIME. THANK YOU!</p>
      </div>
    </div>
-   <script>
-     // Get the modal
-     var modal = document.getElementById("myModal");
-
-     // Get the button that opens the modal
-     var btn = document.getElementById("myBtn");
-
-     // Get the <span> element that closes the modal
-     var span = document.getElementsByClassName("close")[0];
-
-     // When the user clicks on the button, open the modal
-     btn.onclick = function () {
-       modal.style.display = "block";
-     };
-
-     // When the user clicks on <span> (x), close the modal
-     span.onclick = function () {
-       modal.style.display = "none";
-     };
-
-     // When the user clicks anywhere outside of the modal, close it
-     window.onclick = function (event) {
-       if (event.target == modal) {
-         modal.style.display = "none";
-       }
-     };
-   </script>
-   
+  
+  
         </form>
       </div>
     </div>
@@ -507,93 +413,7 @@
         </div>
       </div>
     </div></div>
-    <script>
-      let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-    </script>
-
    </section>
-<section>
-  <footer>
-    <!-- Hinh logo -->
-    <div class="k1">
-      <img class="logo" src="../images/logo.png" />
-    </div>
-    <!-- Thong tin khach san -->
-    <div class="k2">
-      <h3>DASAN HOTELS</h3>
-      <p id="address">
-        Ho Chi Minh City branch Times Square Building 22-36 Nguyen Hue|
-        District 1| HCMC | Vietnam
-        <br />
-        +84 (0) 28 3823 6688
-        <br />
-        The Hanoi branch 8 Do Duc Duc, Me Tri, Tu Liem, Hanoi
-        <br />
-        +84 (0) 28 3823 6666
-        <br />
-        <br />
-        Da Nang branch Son Tra Peninsula, Da Nang, Vietnam
-        <br />
-        +84 (0) 28 3823 6888 Phan Thiet Branch 5 Nguyen Dinh Chieu, Phu Hai,
-        Phan Thiet City, Binh Thuan
-        <br />
-        +84 (0) 28 3823 8888
-        <br />
-        info@dasanhotels.com
-      </p>
-    </div>
-    <!-- Link -->
-    <div class="k3">
-      <a href="#">Our Hotels</a>
-      <br />
-      <a href="#">Our Conferencing</a>
-      <br />
-      <a href="#">Our Company</a>
-    </div>
-    <!-- Dang ki nhan thong bao -->
-    <div class="k4">
-      <div>
-        <label for="emailAdd">Subcribe for Offers</label>
-        <br />
-        <input
-          type="text"
-          id="emailAdd"
-          placeholder="nguyenvanteo@gmail.com"
-        />
-      </div>
-
-      <button type="submit" id="subcribe">Subcribe Now</button>
-    </div>
-  </footer>
-</section>   
-
+   <div id="footer"></div>
   </body>
 </html>

@@ -1,3 +1,9 @@
+window.onload = function () {
+  $(function () {
+    $("#header").load("MENU.html");
+    $("#footer").load("footer.html");
+  });
+};
 // Modal Form
 var modal = document.getElementById("bgModal");
 var close = document.getElementById("close");
