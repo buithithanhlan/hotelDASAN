@@ -1,7 +1,7 @@
 .slidewrap {
   display: flex;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 50px;
 }
 .slidewrap img {
   height: 500px;
@@ -19,7 +19,7 @@
 
 .slide-wrapper {
   width: 3100px;
-  animation: slide 5s ease infinite;
+  animation: slide 8s ease infinite;
 }
 
 .slide {

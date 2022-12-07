@@ -1,3 +1,10 @@
+window.onload = function () {
+  $(function () {
+    $("#header").load("MENU.html");
+    $("#footer").load("footer.html");
+  });
+};
+
 document.querySelector(".HCM").style.display = "none";
 document.querySelector(".HN").style.display = "none";
 document.querySelector(".DN").style.display = "none";
@@ -28,20 +35,14 @@ function selectBranch() {
     document.querySelector(".DN").style.display = "none";
   }
 
-  window.scrollTo(0, document.body.scrollHeight);
+  // window.scrollTo(0, document.body.scrollHeight);
 }
 
-// window.onload = function () {
-// $(function () {
-//   $("#header").load("header.html");
-// });
-
 let elements = document.getElementsByClassName("button");
-
 for (let i = 0; i < elements.length; i++) {
   elements[i].onclick = function () {
     $(function () {
-      $("#formHoiNghi").load("../HTML/formhoinghi.html");
+      $("#formHoiNghi").load("./formhoinghi.html");
     });
   };
 }
